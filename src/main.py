@@ -1,8 +1,8 @@
 import asyncio
 from aiogram import Bot, Dispatcher
 
+from src.handlers import start, chat
 from src.config import BOT_TOKEN
-from src.handlers import start
 from src.storage.db import init_db
 
 async def main():
@@ -12,6 +12,8 @@ async def main():
     dp = Dispatcher()
 
     dp.include_router(start.router)
+    dp.include_router(chat.router)
+
 
     await dp.start_polling(bot)
 
