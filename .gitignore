@@ -1,8 +1,5 @@
-venv/
+.env
 .venv/
 __pycache__/
-.env
-*.log
-.idea/
-.vscode/
 bot.db
+*.log
